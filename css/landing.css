@@ -1,0 +1,191 @@
+/* ============================================================
+   Fresh Cruising — Cruise Ship Landing page
+   (loads after tokens.css + home.css; reuses nav / connect / footer)
+   ============================================================ */
+
+/* ---- Hero (ship image + title, over-hero nav like the homepage) ---- */
+.land-hero { position: relative; height: 672px; overflow: hidden; background: var(--dark-grey); }
+.land-hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.land-hero .site-header { z-index: 30; }
+.land-hero__title { position: absolute; z-index: 5; left: 58%; top: 470px; right: 40px; display: flex; flex-direction: column; align-items: center; gap: 20px; color: #fff; text-align: center; text-shadow: 0 2px 12px rgba(0,0,0,.45); }
+.land-hero__title .explore { font-weight: 600; font-size: clamp(26px,3vw,36px); }
+.land-hero__title .ship { font-weight: 600; font-size: clamp(40px,5vw,60px); line-height: 1; }
+.land-hero__title .line { width: min(421px, 80%); height: 0; border-top: 2px solid #fff; }
+
+/* ---- Introduction ---- */
+.intro { padding-block: 58px 70px; }
+.intro__top { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.intro__text h2 { font-weight: 500; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); max-width: 524px; line-height: 1.15; }
+.intro__text .body { margin-top: 26px; max-width: 530px; display: flex; flex-direction: column; gap: 1em; font-weight: 500; font-size: 18px; color: var(--dark-grey); line-height: 1.4; }
+.intro__img { width: 100%; height: 560px; object-fit: cover; }
+.intro__facts { position: relative; z-index: 2; margin-top: -90px; width: min(1064px, 100%); background: var(--grey-2); color: #fff; display: flex; align-items: stretch; overflow: hidden; box-shadow: 0 8px 24px rgba(0,0,0,.25); }
+.intro__video { position: relative; flex: 0 0 232px; }
+.intro__video img.thumb { width: 100%; height: 100%; object-fit: cover; }
+.intro__video img.play { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 52px; height: 52px; }
+.intro__details { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 20px 24px; }
+.intro__details h3 { font-weight: 500; font-size: 18px; letter-spacing: .72px; }
+.intro__stats { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
+.stat { display: flex; flex-direction: column; align-items: center; gap: 6px; text-align: center; }
+.stat img { height: 40px; width: auto; }
+.stat b { font-weight: 600; font-size: 18px; }
+.stat span { font-weight: 500; font-size: 16px; }
+
+/* ---- Onboard ---- */
+.onboard { padding-block: 50px 64px; text-align: center; }
+.onboard h2 { font-weight: 600; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); }
+.onboard__intro { font-family: var(--font-display); font-size: 16px; color: var(--dark-grey); line-height: 1.5; max-width: 945px; margin: 16px auto 0; }
+.onboard__tabs { display: flex; justify-content: center; gap: 48px; margin-top: 40px; flex-wrap: wrap; }
+.onboard__tabs span { font-family: var(--font-display); font-size: 24px; color: var(--dark-grey); padding-bottom: 6px; border-bottom: 3px solid transparent; cursor: pointer; }
+.onboard__tabs span.on { border-bottom-color: var(--dark-grey); }
+.onboard__banner { position: relative; margin-top: 28px; height: 560px; border-radius: 4px; overflow: hidden; color: #fff; }
+.onboard__banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.onboard__banner::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.28); }
+.onboard__banner .kicker { position: absolute; top: 70px; left: 50%; transform: translateX(-50%); z-index: 2; font-weight: 700; font-size: 24px; letter-spacing: .96px; }
+.onboard__banner .content { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px; }
+.onboard__banner .content h3 { font-weight: 700; font-size: clamp(30px,4vw,40px); max-width: 724px; }
+.onboard__banner .content p { font-weight: 500; font-size: clamp(18px,2vw,24px); max-width: 724px; margin-top: 16px; line-height: 1.35; }
+.onboard__nav { position: absolute; bottom: 96px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; align-items: center; gap: 24px; }
+.onboard__nav button { color: #fff; font-size: 26px; line-height: 1; padding: 4px; }
+.onboard__nav .odots { display: flex; gap: 8px; }
+.onboard__nav .odots i { width: 44px; height: 4px; background: rgba(255,255,255,.5); }
+.onboard__nav .odots i.on { background: #fff; }
+.onboard__cta { position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); z-index: 3; background: #fff; color: #af3d36; font-weight: 600; font-size: 14px; letter-spacing: .3px; padding: 11px 38px; border-radius: 4px; }
+
+/* ---- Special Offers (reuses .result rows from search.css) ---- */
+.land-offers { padding-block: 20px 60px; }
+.land-offers .sec-head { text-align: left; margin-bottom: 24px; }
+.land-offers .sec-head h2 { font-weight: 600; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); }
+.land-offers .sec-head p { font-size: 18px; color: var(--dark-grey); margin-top: 8px; }
+
+/* ---- Cabins ---- */
+.cabins-sec { padding-block: 50px 64px; }
+.cabins-sec h2 { text-align: center; font-weight: 600; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); }
+.cabins-sec__intro { text-align: center; max-width: 994px; margin: 16px auto 0; font-size: 16px; color: var(--dark-grey); line-height: 1.55; }
+.cabins-types { display: flex; justify-content: center; gap: 40px; margin-top: 34px; flex-wrap: wrap; }
+.cabins-type { display: flex; flex-direction: column; align-items: center; gap: 10px; cursor: pointer; }
+.cabins-type img { width: 108px; height: 72px; object-fit: cover; border-radius: 2px; }
+.cabins-type span { font-size: 16px; color: var(--dark-grey); padding-bottom: 6px; border-bottom: 3px solid transparent; }
+.cabins-type.on span { border-bottom-color: var(--dark-grey); }
+.cabins-panel { background: #fcf2cd; border-radius: 4px; margin-top: 34px; padding: 28px 38px; display: grid; grid-template-columns: 1fr 380px; gap: 40px; align-items: start; }
+.cabins-panel__title { font-size: clamp(28px,3vw,36px); color: var(--dark-grey); font-weight: 400; }
+.cabins-panel__desc { font-size: 16px; color: var(--dark-grey); line-height: 1.5; margin: 14px 0 24px; max-width: 780px; display: flex; flex-direction: column; gap: .8em; }
+.cabins-panel__lists { display: flex; gap: 48px; flex-wrap: wrap; }
+.cabins-panel__lists h4 { font-weight: 500; font-size: 16px; color: var(--dark-grey); margin-bottom: 6px; }
+.cabins-panel__lists .feat p { font-size: 16px; color: var(--dark-grey); margin: 3px 0; }
+.cabins-panel__lists .comp .ci { display: flex; align-items: center; gap: 10px; margin: 5px 0; font-size: 16px; color: var(--dark-grey); }
+.cabins-panel__lists .comp .ci img { width: 18px; height: 18px; flex: 0 0 auto; }
+.cabins-cta { display: inline-flex; background: #af3d36; color: #fff; font-weight: 600; font-size: 14px; padding: 11px 38px; border-radius: 4px; margin-top: 26px; }
+.cabins-glance { background: #fff; border-radius: 8px; padding: 16px; }
+.cabins-glance h4 { color: var(--blue); font-weight: 500; font-size: clamp(24px,2.4vw,32px); text-align: center; line-height: 1.15; }
+.cabins-glance .pic { width: 100%; height: 205px; object-fit: cover; margin: 16px 0 4px; }
+.cabins-glance .zoom { color: var(--blue); font-size: 16px; text-align: right; display: block; }
+.cabins-glance .spec { display: flex; gap: 24px; font-size: 16px; margin: 6px 0; }
+.cabins-glance .spec .k { color: var(--mid-grey); }
+.cabins-glance .spec .v { color: var(--dark-grey); }
+.cabins-glance .codes-lbl { font-size: 16px; color: var(--dark-grey); margin-top: 10px; }
+.cabins-glance .codes { display: flex; gap: 4px; margin-top: 6px; }
+.cabins-glance .codes span { padding: 4px 9px; font-size: 16px; color: #000; }
+.cabins-glance .note { font-family: var(--font-display); font-style: italic; font-size: 11px; color: var(--dark-grey); margin-top: 14px; }
+
+@media (max-width: 1000px) { .cabins-panel { grid-template-columns: 1fr; } }
+
+/* ---- Deckplans ---- */
+.deckplans { padding-block: 50px 60px; text-align: center; }
+.deckplans h2 { font-weight: 600; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); }
+.deckplans__intro { max-width: 864px; margin: 16px auto 0; font-size: 16px; color: var(--dark-grey); line-height: 1.5; }
+.deckplans__view { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; font-size: 18px; color: var(--dark-grey); margin-top: 24px; }
+.deckplans__view svg { width: 16px; height: 16px; }
+.deckplans__select { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+.deckplans__select .lbl { font-size: 18px; color: var(--dark-grey); }
+.deckplans__select .sel { position: relative; border: 1px solid var(--dark-grey); padding: 8px 44px 8px 16px; font-size: 18px; color: var(--dark-grey); }
+.deckplans__select .sel::after { content: ""; position: absolute; right: 16px; top: 50%; width: 8px; height: 8px; border-right: 2px solid var(--dark-grey); border-bottom: 2px solid var(--dark-grey); transform: translateY(-70%) rotate(45deg); }
+.deckplans .overview { display: block; width: 100%; max-width: 960px; margin: 30px auto 0; }
+.deckplans__zoom { display: block; color: var(--blue); font-size: 16px; max-width: 960px; margin: 8px auto 0; text-align: right; }
+.deckplans__deck { font-size: 24px; color: var(--dark-grey); margin-top: 36px; }
+.deckplans .detail { display: block; width: 100%; max-width: 976px; margin: 16px auto 0; }
+
+/* ---- Contact Form ---- */
+.contactf { padding-block: 20px 64px; text-align: center; }
+.contactf h2 { font-weight: 600; font-size: clamp(26px,2.8vw,32px); color: var(--blue); }
+.contactf p.sub { font-size: clamp(18px,2vw,23px); color: var(--dark-grey); margin-top: 12px; }
+.contactf form { max-width: 696px; margin: 26px auto 0; display: flex; flex-direction: column; gap: 16px; }
+.contactf .frow { display: flex; gap: 20px; }
+.contactf input { flex: 1; min-width: 0; border: 1px solid var(--light-grey); padding: 12px 12px; font-family: var(--font-display); font-size: 14px; color: var(--dark-grey); }
+.contactf .tel { flex: 0 0 112px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--light-grey); padding: 0 10px; font-family: var(--font-display); font-size: 14px; color: var(--dark-grey); }
+.contactf .tel img { width: 20px; height: 15px; }
+.contactf .btn-chat { align-self: center; background: var(--blue); color: #fff; border-radius: 4px; padding: 13px 40px; font-family: var(--font-display); font-size: 18px; display: inline-flex; align-items: center; gap: 14px; width: 338px; max-width: 100%; justify-content: center; }
+.contactf .btn-chat::after { content: ""; width: 8px; height: 8px; border-right: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
+@media (max-width: 640px) { .contactf .frow { flex-direction: column; } }
+
+/* ---- Destinations & Ports ---- */
+.landdest { padding-block: 50px 60px; text-align: center; }
+.landdest h2 { font-weight: 600; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); margin-bottom: 24px; }
+.landdest img { display: block; width: 100%; max-width: 1104px; margin: 0 auto; }
+
+/* ---- Sister Ships ---- */
+.sisterships { padding-block: 50px 60px; }
+.sisterships h2 { text-align: center; font-weight: 600; font-size: clamp(30px,3.4vw,40px); color: var(--dark-grey); margin-bottom: 28px; }
+.sisterships__scroll { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 8px; scroll-snap-type: x mandatory; }
+.sistership { position: relative; flex: 0 0 304px; height: 180px; border-radius: 4px; overflow: hidden; scroll-snap-align: start; }
+.sistership img { width: 100%; height: 100%; object-fit: cover; }
+.sistership::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,.55)); }
+.sistership span { position: absolute; left: 12px; bottom: 10px; z-index: 2; color: #fff; font-weight: 600; font-size: 28px; text-shadow: 0 1px 4px rgba(0,0,0,.4); }
+
+/* ---- Promo (dark banner) ---- */
+.landpromo { background: var(--grey-2); color: #fff; padding-block: 48px 56px; }
+.landpromo h2 { text-align: center; font-weight: 600; font-size: clamp(26px,2.8vw,32px); margin-bottom: 30px; }
+.landpromo__row { display: flex; align-items: stretch; max-width: 1104px; margin: 0 auto; }
+.landpromo__img { position: relative; flex: 0 0 325px; }
+.landpromo__img > img { width: 100%; height: 320px; object-fit: cover; }
+.landpromo__badge { position: absolute; right: -30px; top: 11px; background: rgba(255,255,255,.85); color: var(--dark-grey); padding: 8px 14px; max-width: 180px; }
+.landpromo__badge .big { font-family: "EB Garamond", var(--font-display); font-size: 30px; font-weight: 500; line-height: 1; }
+.landpromo__badge .lbl { font-family: var(--font-display); font-weight: 700; font-size: 15px; line-height: 1.05; }
+.landpromo__badge .fine { font-size: 9px; line-height: 1.25; margin-top: 4px; }
+.landpromo__deal { background: var(--turquoise); flex: 1; min-width: 0; padding: 26px 40px; display: flex; flex-direction: column; gap: 14px; }
+.landpromo__deal h3 { font-weight: 500; font-size: 22px; }
+.landpromo__deal .lead { font-family: var(--font-display); font-size: 18px; }
+.landpromo__deal ul { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.landpromo__deal ul li { font-family: var(--font-display); font-size: 18px; position: relative; padding-left: 18px; }
+.landpromo__deal ul li::before { content: ""; position: absolute; left: 0; top: 9px; width: 6px; height: 6px; border-radius: 50%; background: #fff; }
+.landpromo__deal ul li.gold { color: var(--yellow); }
+.landpromo__deal ul li.gold::before { background: var(--yellow); }
+.landpromo__deal .terms { font-family: var(--font-display); font-size: 14px; }
+.landpromo__deal .btn3 { align-self: flex-start; background: var(--yellow-50); color: var(--dark-grey); font-family: var(--font-display); font-size: 14px; padding: 9px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 12px; }
+.landpromo__deal .btn3::after { content: "\203A"; }
+
+/* ---- Sales Agents (blue banner) ---- */
+.agents { background: var(--blue); color: #fff; padding-block: 48px; }
+.agents__row { display: flex; gap: 45px; align-items: flex-start; flex-wrap: wrap; }
+.agents__card { display: flex; gap: 48px; align-items: flex-start; flex: 1; min-width: 300px; }
+.agents__photo { display: flex; flex-direction: column; gap: 15px; align-items: flex-start; }
+.agents__photo img { width: 152px; height: 180px; object-fit: cover; background: rgba(69,215,246,.5); }
+.agents__photo .btn4 { background: var(--yellow-50); color: var(--dark-grey); font-family: var(--font-display); font-weight: 700; font-size: 16px; padding: 8px 20px; display: inline-flex; align-items: center; gap: 16px; }
+.agents__photo .btn4::after { content: "\203A"; }
+.agents__tip h4 { font-weight: 600; font-size: 24px; letter-spacing: .48px; color: var(--yellow); }
+.agents__tip p.txt { font-size: 18px; margin: 12px 0; max-width: 592px; }
+.agents__tip hr { border: 0; border-top: 1px solid rgba(255,255,255,.5); max-width: 592px; margin: 0 0 12px; }
+.agents__tip .meta { font-family: var(--font-display); font-size: 18px; color: var(--light-grey); }
+.agents__tip .meta2 { font-family: var(--font-display); font-size: 16px; color: var(--light-grey); margin-top: 4px; }
+.agents__badge { background: var(--yellow); color: var(--dark-grey); width: 230px; min-height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 12px; flex: 0 0 auto; }
+.agents__badge .num { font-weight: 700; font-size: 60px; line-height: 1; }
+.agents__badge b { font-family: var(--font-display); font-weight: 700; font-size: 18px; letter-spacing: .54px; }
+.agents__badge p { font-size: 16px; }
+
+/* ---- Highlights (yellow quote band) ---- */
+.landhighlights { background: var(--yellow); }
+.landhighlights .container { display: flex; align-items: center; gap: 40px; padding-block: 40px; justify-content: center; }
+.landhighlights .q { font-size: 60px; line-height: 0; color: var(--dark-grey); font-family: Georgia, serif; }
+.landhighlights p { font-weight: 500; font-size: clamp(18px,2vw,24px); color: var(--dark-grey); line-height: 1.35; max-width: 859px; text-align: center; }
+
+@media (max-width: 1000px) {
+  .landpromo__row { flex-direction: column; } .landpromo__img { flex-basis: auto; } .landpromo__badge { right: 12px; }
+  .agents__card { flex-direction: column; } .agents__badge { width: 100%; }
+}
+@media (max-width: 900px) {
+  .onboard__banner { height: 460px; }
+  .land-hero__title { left: 0; right: 0; top: auto; bottom: 30px; }
+  .intro__top { grid-template-columns: 1fr; gap: 28px; }
+  .intro__img { height: 320px; }
+  .intro__facts { margin-top: 24px; flex-direction: column; }
+  .intro__video { flex-basis: 200px; }
+}

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Cruising</title>
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <img class="hero__bg" src="assets/img/hero-ship.png" alt="" />
+
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <nav class="nav">
+          <a href="#"><img class="nav__logo" src="assets/img/logo.svg" alt="Fresh Cruising" /></a>
+          <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+          <ul class="nav__links">
+            <li class="has-mega"><a href="#" aria-haspopup="true" aria-expanded="false">Cruise Deals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+              <div class="mega">
+                <div class="mega__col"><h5>Todays Best Deals</h5><a href="#">Special Offers</a><a href="#">Late Availability</a><a href="#">Cruise Promotions</a><a href="#">Deal of the Week</a></div>
+                <div class="mega__col"><h5>Save More</h5><a href="#">Bucket List Cruises</a><a href="#">No-Fly Cruises</a><a href="#">Cruise &amp; Stay</a><a href="#">Fresh Cruise Club</a></div>
+              </div>
+            </li>
+            <li class="has-mega"><a href="#" aria-haspopup="true" aria-expanded="false">Cruise Lines <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+              <div class="mega">
+                <div class="mega__col"><h5>Popular Lines</h5><a href="#">Royal Caribbean</a><a href="#">Celebrity Cruises</a><a href="#">P&amp;O Cruises</a><a href="#">Princess Cruises</a></div>
+                <div class="mega__col"><h5>More Lines</h5><a href="#">MSC Cruises</a><a href="#">Norwegian Cruise Line</a><a href="#">Cunard</a><a href="#">Marella Cruises</a></div>
+              </div>
+            </li>
+            <li class="has-mega"><a href="#" aria-haspopup="true" aria-expanded="false">Destinations <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+              <div class="mega">
+                <div class="mega__col"><h5>Europe</h5><a href="#">Mediterranean</a><a href="#">Northern Europe</a><a href="#">Norwegian Fjords</a><a href="#">British Isles</a></div>
+                <div class="mega__col"><h5>Worldwide</h5><a href="#">Caribbean</a><a href="#">Alaska</a><a href="#">Dubai &amp; Emirates</a><a href="#">Hawaii</a></div>
+              </div>
+            </li>
+            <li class="has-mega"><a href="#" aria-haspopup="true" aria-expanded="false">Cruise Types <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+              <div class="mega">
+                <div class="mega__col"><h5>By Style</h5><a href="#">No-Fly Cruises</a><a href="#">Cruise &amp; Stay</a><a href="#">River Cruises</a><a href="#">Luxury Cruises</a></div>
+                <div class="mega__col"><h5>By Interest</h5><a href="#">Foodie Cruises</a><a href="#">Expedition Cruises</a><a href="#">Cruise &amp; Rail</a><a href="#">Adventure Cruises</a></div>
+              </div>
+            </li>
+            <li><a href="#">Guides</a></li>
+          </ul>
+          <span class="nav__phone"><img src="assets/icons/phone.svg" alt="" />0800 1234 888</span>
+          <div class="nav__icons">
+            <img src="assets/icons/header-right.svg" alt="Search, wishlist, account" />
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container hero__inner">
+      <div class="price-drop">
+        <img class="pd-logo pd-celebrity" src="assets/img/logo-celebrity.svg" alt="Celebrity" />
+        <img class="pd-logo pd-royal" src="assets/img/logo-royal.svg" alt="Royal Caribbean" />
+        <img class="pd-logo pd-pando" src="assets/img/logo-pando.svg" alt="P&O" />
+        <img class="pd-logo pd-ncl" src="assets/img/logo-ncl.svg" alt="Norwegian" />
+        <img class="pd-wordmark" src="assets/img/price-drop-wordmark.svg" alt="Price Drop" />
+        <div class="pd-sale"><span>SALE</span></div>
+        <div class="pd-days"><span>2 DAYS ONLY</span></div>
+        <span class="pd-avail">Available on 2023 sailings</span>
+      </div>
+
+      <form class="search" onsubmit="return false">
+        <div class="search__top">
+          <span class="search__title">FIND MY PERFECT CRUISE HOLIDAY</span>
+          <div class="search__opts">
+            <span><span class="search__chk"></span> Sail from the UK</span>
+            <span><img src="assets/icons/rotate-cw.svg" alt="" style="width:18px;height:18px"/> Reset Filters</span>
+          </div>
+        </div>
+        <div class="search__fields">
+          <label class="search__field"><span class="ph"><img src="assets/icons/dest.svg" alt=""/>What&rsquo;s Your Destination?</span></label>
+          <label class="search__field"><span class="ph"><img src="assets/icons/calendar.svg" alt=""/>When are you going?</span></label>
+          <label class="search__field"><span class="ph"><img src="assets/icons/users.svg" alt=""/>Who&rsquo;s coming?</span></label>
+          <label class="search__field"><span class="ph"><img src="assets/icons/clock.svg" alt=""/>How long for?</span></label>
+          <label class="search__field"><span class="ph"><img src="assets/icons/anchor.svg" alt=""/>What cruise type?</span></label>
+          <a class="search__go" href="search-results.html"><img src="assets/icons/search.svg" alt=""/>FIND MY CRUISE</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== CONFIDENCE ===================== -->
+  <section class="section confidence">
+    <div class="container">
+      <div class="reviews">
+        <span>Reviews from our sailors</span>
+        <span>4.4/5</span>
+        <img class="stars" src="assets/icons/conf-stars.svg" alt="4.4 out of 5" />
+        <svg class="rev-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        <span>Provided by</span>
+        <img class="feefo" src="assets/img/feefo.png" alt="Feefo" />
+        <a class="viewall" href="#">View all 3,346 reviews</a>
+      </div>
+      <h2>Book and Cruise with Confidence</h2>
+      <div class="usp-row">
+        <div class="usp"><img src="assets/icons/conf-vaccine.svg" alt=""/><span>Vaccination and testing policy <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></div>
+        <div class="usp"><img src="assets/icons/conf-refresh.svg" alt=""/><span>Fee-free booking changes <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></div>
+        <div class="usp"><img src="assets/icons/conf-care.svg" alt=""/><span>We look after you <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></div>
+        <div class="usp"><img src="assets/icons/conf-atol.svg" alt=""/><span>ATOL and ABTA protected <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></div>
+        <div class="usp"><img src="assets/icons/conf-ship.svg" alt=""/><span>Best Price Guarantee <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section features">
+    <div class="container">
+      <div class="sec-head"><h2>This Weeks Fresh Features</h2><p>Discover our latest experiences and promotions</p></div>
+      <div class="feature-carousel" id="featureCarousel">
+        <button class="feature-nav prev" data-dir="-1" aria-label="Previous feature"><img src="assets/icons/arrow-left.svg" alt=""/></button>
+        <div class="feature-track" id="featureTrack">
+          <article class="feature-card">
+            <img src="assets/img/feat-golf.png" alt="" />
+            <div class="feature-card__body">
+              <div class="feature-card__eyebrow">Take Your Golf Passion On Holiday</div>
+              <div class="feature-card__title">Discover our new cruise &amp; golf experience</div>
+              <a class="feature-card__cta" href="#">Learn more <img src="assets/icons/arrow-left.svg" alt=""/></a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="assets/img/feat-lastminute.png" alt="" />
+            <div class="feature-card__body">
+              <div class="feature-card__eyebrow">Last-Minute Departures</div>
+              <div class="feature-card__title">Have you packed your bags? Start cruising now</div>
+              <a class="feature-card__cta" href="#">Discover all late availability <img src="assets/icons/arrow-left.svg" alt=""/></a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="assets/img/feat-topdeals.png" alt="" />
+            <div class="feature-card__body">
+              <div class="feature-card__eyebrow">Top Deals Promo</div>
+              <div class="feature-card__title">Enjoy Summer at any time of the year. Prices starting from just &pound;349 per person</div>
+              <a class="feature-card__cta" href="#">Book Before 31/08 <img src="assets/icons/arrow-left.svg" alt=""/></a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="assets/img/feat-onecountry.png" alt="" />
+            <div class="feature-card__body">
+              <div class="feature-card__eyebrow">Country-Intensive Voyages</div>
+              <div class="feature-card__title">Genuine moments of discovery. One-country, multiple ports</div>
+              <a class="feature-card__cta" href="#">Discover more <img src="assets/icons/arrow-left.svg" alt=""/></a>
+            </div>
+          </article>
+          <article class="feature-card">
+            <img src="assets/img/feat-southampton.png" alt="" />
+            <div class="feature-card__body">
+              <div class="feature-card__eyebrow">Southampton Departures Promo</div>
+              <div class="feature-card__title">Exclusive deals on sailings from Southampton. Prices starting from &pound;449 per person</div>
+              <a class="feature-card__cta" href="#">Book before 30/09 <img src="assets/icons/arrow-left.svg" alt=""/></a>
+            </div>
+          </article>
+        </div>
+        <button class="feature-nav next" data-dir="1" aria-label="Next feature"><img src="assets/icons/arrow-left.svg" alt=""/></button>
+      </div>
+      <div class="dots" id="featureDots"></div>
+    </div>
+  </section>
+
+  <!-- ===================== PROMOTIONS ===================== -->
+  <section class="section promotions">
+    <div class="container">
+      <div class="sec-head" style="text-align:left"><h2>Fresh Cruise Promos</h2><p>Discover our latest cruise incentives and promotions</p></div>
+      <div class="grid-3">
+        <article class="promo" style="background:#3db6b8"><img class="promo__img" src="assets/img/promo-royal.png" alt=""/><img class="promo__logo" src="assets/icons/pl-royal.svg" alt=""/><p class="promo__text">Guests 3 &amp; 4 £149* | Up to £260 off your Stateroom* PLUS+ Up to £440 off your Stateroom**</p><a class="promo__bar" href="#">Explore the deal <img src="assets/icons/arrow-left.svg" alt=""/></a></article>
+        <article class="promo" style="background:#b05bb7"><img class="promo__img" src="assets/img/promo-celebrity.png" alt=""/><img class="promo__logo" src="assets/icons/pl-celebrity.svg" alt=""/><p class="promo__text">60% off second guest + up to $200 onboard credit*</p><a class="promo__bar" href="#">Explore the deal <img src="assets/icons/arrow-left.svg" alt=""/></a></article>
+        <article class="promo dark" style="background:#45d7f6"><img class="promo__img" src="assets/img/promo-msc.png" alt=""/><img class="promo__logo" src="assets/icons/pl-msc.svg" alt=""/><p class="promo__text">Balcony for price of Interior - 7 nights from just £499 per person*</p><a class="promo__bar" href="#">Explore the deal <img src="assets/icons/arrow-left.svg" alt=""/></a></article>
+        <article class="promo" style="background:#007dda"><img class="promo__img" src="assets/img/promo-princess.png" alt=""/><img class="promo__logo" src="assets/icons/pl-princess.svg" alt=""/><p class="promo__text">Up to $500 onboard spend per couple on 2023/24 cruises*</p><a class="promo__bar" href="#">Explore the deal <img src="assets/icons/arrow-left.svg" alt=""/></a></article>
+        <article class="promo dark" style="background:#45d7f6"><img class="promo__img" src="assets/img/promo-ncl.png" alt=""/><img class="promo__logo promo__logo--wide" src="assets/icons/pl-ncl.svg" alt=""/><p class="promo__text">Save up to 40% off plus upgrades from just £149pp + £250pp Airfare Credit*</p><a class="promo__bar" href="#">Explore the deal <img src="assets/icons/arrow-left.svg" alt=""/></a></article>
+        <article class="promo" style="background:#3db6b8"><img class="promo__img" src="assets/img/promo-pando.png" alt=""/><img class="promo__logo" src="assets/icons/pl-pando.svg" alt=""/><p class="promo__text">Receive up to £740 Onboard Spending Money*</p><a class="promo__bar" href="#">Explore the deal <img src="assets/icons/arrow-left.svg" alt=""/></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SPECIAL OFFERS ===================== -->
+  <section class="section offers">
+    <div class="container">
+      <div class="sec-head" style="text-align:left"><h2>Our Latest Fresh Offers</h2><p>Discover Todays Hottest Deals - Saving You £££&rsquo;s</p></div>
+      <div class="tabs" id="offerTabs"><button>Last-Minute</button><button>Europe</button><button class="on">Caribbean</button><button>Bucket List</button><button>UK Sailings</button></div>
+      <div class="offer-carousel">
+      <button class="offer-nav prev" data-dir="-1" aria-label="Previous offers"><img src="assets/icons/arrow-left.svg" alt=""/></button>
+      <div class="offer-scroll" id="offerScroll">
+        <!-- offer template repeated -->
+        <article class="offer"><div class="offer__media"><img src="assets/img/offer-orlando.png" alt=""/><img class="offer__heart" src="assets/icons/heart.svg" alt=""/><span class="offer__banner">07 nights stay in Orlando</span><span class="offer__nights">14<br>Nights</span></div><div class="offer__body"><h3 class="offer__title">Orlando &amp; Easter Caribbean Family Cruise</h3><img class="offer__logo" src="assets/icons/o-royal.svg" alt=""/><div class="offer__row"><img src="assets/icons/o-ship.svg" alt=""/>Wonder of the Seas</div><div class="offer__row"><img src="assets/icons/o-calendar.svg" alt=""/>October 23, 2022</div><div class="offer__price"><span class="from">From</span><b>£499</b> <span class="pp">per person</span></div><span class="offer__save">Save up to 44%</span><div class="offer__exc"><img src="assets/icons/o-pound.svg" alt=""/>Huge Savings on Port Excursions</div><div class="offer__btns"><a class="enq" href="search-results.html">Enquire Now</a><a class="view" href="search-results.html">View Details</a></div></div></article>
+        <article class="offer"><div class="offer__media"><img src="assets/img/offer-cococay.png" alt=""/><img class="offer__heart" src="assets/icons/heart.svg" alt=""/><span class="offer__banner">Deal of the Week</span><span class="offer__nights">14<br>Nights</span></div><div class="offer__body"><h3 class="offer__title">Orlando &amp; Easter Caribbean Family Cruise</h3><img class="offer__logo" src="assets/icons/o-royal.svg" alt=""/><div class="offer__row"><img src="assets/icons/o-ship.svg" alt=""/>Wonder of the Seas</div><div class="offer__row"><img src="assets/icons/o-calendar.svg" alt=""/>October 23, 2022</div><div class="offer__price"><span class="from">From</span><b>£499</b> <span class="pp">per person</span></div><span class="offer__save">Save up to 44%</span><div class="offer__exc"><img src="assets/icons/o-pound.svg" alt=""/>Huge Savings on Port Excursions</div><div class="offer__btns"><a class="enq" href="search-results.html">Enquire Now</a><a class="view" href="search-results.html">View Details</a></div></div></article>
+        <article class="offer"><div class="offer__media"><img src="assets/img/offer-maracas.png" alt=""/><img class="offer__heart" src="assets/icons/heart.svg" alt=""/><span class="offer__banner">Includes Free Excursions*</span><span class="offer__nights">14<br>Nights</span></div><div class="offer__body"><h3 class="offer__title">Orlando &amp; Easter Caribbean Family Cruise</h3><img class="offer__logo" src="assets/icons/o-royal.svg" alt=""/><div class="offer__row"><img src="assets/icons/o-ship.svg" alt=""/>Wonder of the Seas</div><div class="offer__row"><img src="assets/icons/o-calendar.svg" alt=""/>October 23, 2022</div><div class="offer__price"><span class="from">From</span><b>£499</b> <span class="pp">per person</span></div><span class="offer__save">Save up to 44%</span><div class="offer__exc"><img src="assets/icons/o-pound.svg" alt=""/>Huge Savings on Port Excursions</div><div class="offer__btns"><a class="enq" href="search-results.html">Enquire Now</a><a class="view" href="search-results.html">View Details</a></div></div></article>
+        <article class="offer"><div class="offer__media"><img src="assets/img/offer-thrill.png" alt=""/><img class="offer__heart" src="assets/icons/heart.svg" alt=""/><span class="offer__banner">07 nights stay in Orlando</span><span class="offer__nights">14<br>Nights</span></div><div class="offer__body"><h3 class="offer__title">Orlando &amp; Easter Caribbean Family Cruise</h3><img class="offer__logo" src="assets/icons/o-royal.svg" alt=""/><div class="offer__row"><img src="assets/icons/o-ship.svg" alt=""/>Wonder of the Seas</div><div class="offer__row"><img src="assets/icons/o-calendar.svg" alt=""/>October 23, 2022</div><div class="offer__price"><span class="from">From</span><b>£499</b> <span class="pp">per person</span></div><span class="offer__save">Save up to 44%</span><div class="offer__exc"><img src="assets/icons/o-pound.svg" alt=""/>Huge Savings on Port Excursions</div><div class="offer__btns"><a class="enq" href="search-results.html">Enquire Now</a><a class="view" href="search-results.html">View Details</a></div></div></article>
+      </div>
+      <button class="offer-nav next" data-dir="1" aria-label="Next offers"><img src="assets/icons/arrow-left.svg" alt=""/></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DESTINATION FEATURE ===================== -->
+  <section class="section destfeature">
+    <div class="container">
+      <div class="df-text">
+        <span class="plus">+</span> <span class="region">Featured Region</span>
+        <h2>South America</h2>
+        <p>Immerse yourself in historic New-World charm and natural wonder, from the iconic white-sand beaches of Brazil to the stark splendor of Ushuaia. Embark on an epicurean adventure of fusion cuisine and vibrant viticulture; get lost in the lively Latin rhythms of unforgettable cities; or drink in the awe-inspiring natural beauty of the Chilean fjords.</p>
+        <a class="btn btn--yellow df-discover" href="#">Discover <img src="assets/icons/arrow-left.svg" class="arrow-r" alt=""/></a>
+      </div>
+      <div class="minis" style="display:contents">
+        <article class="mini"><div class="mini__media"><img src="assets/img/hero-ship.png" style="transform:scaleX(-1)" alt=""/><span class="mini__banner">Incl Free Tours &amp; Excursions</span><img class="mini__heart" src="assets/icons/df-heart.svg" alt=""/><div class="mini__nights"><b>14</b>Nights</div></div><div class="mini__body"><div class="t">Orlando &amp; Easter Caribbean Family Cruise</div><img class="logo" src="assets/icons/o-royal.svg" alt=""/><div class="r"><img src="assets/icons/o-ship.svg" alt=""/>Wonder of the Seas</div><div class="r"><img src="assets/icons/o-calendar.svg" alt=""/>October 23, 2022</div><div class="price"><small>From</small> <b>£499</b> <small>per person</small></div></div><div class="mini__btns"><a class="enq" href="#">Enquire Now</a><a class="view" href="cruise-landing.html">View Details</a></div></article>
+        <article class="mini"><div class="mini__media"><img src="assets/img/df-pyramid.png" alt=""/><span class="mini__banner">Includes Free Cabin Upgrade</span><img class="mini__heart" src="assets/icons/df-heart.svg" alt=""/><div class="mini__nights"><b>14</b>Nights</div></div><div class="mini__body"><div class="t">Orlando &amp; Easter Caribbean Family Cruise</div><img class="logo" src="assets/icons/o-royal.svg" alt=""/><div class="r"><img src="assets/icons/o-ship.svg" alt=""/>Wonder of the Seas</div><div class="r"><img src="assets/icons/o-calendar.svg" alt=""/>October 23, 2022</div><div class="price"><small>From</small> <b>£499</b> <small>per person</small></div></div><div class="mini__btns"><a class="enq" href="#">Enquire Now</a><a class="view" href="cruise-landing.html">View Details</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DESTINATIONS ===================== -->
+  <section class="section destinations">
+    <div class="container">
+      <div class="sec-head" style="text-align:left"><h2>Discover the World</h2><p>Satisfiy your wanderlust and discover your dream destination</p></div>
+      <div class="dest-strip">
+        <div class="tile active"><img src="assets/img/d-med.png" alt=""/><div class="label">MEDITERRANEAN <span class="exp"></span></div></div>
+        <div class="tile"><img src="assets/img/d-northeurope.png" alt=""/></div>
+        <div class="tile"><img src="assets/img/d-emirates.png" alt=""/></div>
+        <div class="tile"><img src="assets/img/d-caribbean.png" alt=""/></div>
+        <div class="tile"><img src="assets/img/d-hongkong.png" alt=""/></div>
+        <div class="tile"><img src="assets/img/d-alaska.png" alt=""/></div>
+        <div class="tile"><img src="assets/img/d-hawaii.png" alt=""/></div>
+        <div class="tile"><img src="assets/img/d-giro.png" alt=""/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TYPES OF CRUISE ===================== -->
+  <section class="section cruisetypes">
+    <div class="container">
+      <div class="sec-head" style="text-align:left"><h2>Our Cruise Types</h2></div>
+      <div class="ctypes-grid">
+        <div class="ctype" style="background:#007dda"><h3>No-Fly Cruises</h3><div class="lines"><p>Explore Deals including Exclusive Value-Added-Extras</p><hr><p>Choose from 11 departure ports</p></div><div class="ci"><img src="assets/icons/tc-harbor.svg" alt=""/><span>+</span><img src="assets/icons/tc-guide.svg" alt=""/></div></div>
+        <div class="ctype" style="background:#45d7f6"><h3>Cruise &amp; Stay</h3><div class="lines"><p>Discover thousands of tailor-made itinararys</p><hr><p>Create your own exclusive bespoke cruise</p></div><div class="ci ci--3"><img src="assets/icons/tc-plane.svg" alt=""/><span>+</span><img src="assets/icons/tc-cruise.svg" alt=""/><span>+</span><img src="assets/icons/tc-bed.svg" alt=""/></div></div>
+      </div>
+      <div class="ctypes-small">
+        <div class="ctype small" style="background:#3db6b8"><h3>River Cruises</h3><img class="ci" src="assets/icons/tc-river.svg" alt="" style="height:70px"/><img class="go" src="assets/icons/tc-arrow.svg" alt=""/></div>
+        <div class="ctype small" style="background:#595959"><h3>Luxury Cruises</h3><img class="ci" src="assets/icons/tc-yacht.svg" alt="" style="height:70px"/><img class="go" src="assets/icons/tc-arrow.svg" alt=""/></div>
+        <div class="ctype small" style="background:#ffe400;color:#3db6b8"><h3>Foodie Cruises</h3><img class="ci" src="assets/icons/tc-chef.svg" alt="" style="height:80px"/><img class="go" src="assets/icons/tc-arrow.svg" alt=""/></div>
+        <div class="ctype small" style="background:#ffe300;color:#3db6b8"><h3>Expedition Cruises</h3><img class="ci" src="assets/icons/tc-wheel.svg" alt="" style="height:85px"/><img class="go" src="assets/icons/tc-arrow.svg" alt=""/></div>
+        <div class="ctype small" style="background:#3db6b8"><h3>Cruise &amp; Rail</h3><img class="ci" src="assets/icons/tc-train.svg" alt="" style="height:80px"/><img class="go" src="assets/icons/tc-arrow.svg" alt=""/></div>
+        <div class="ctype small" style="background:#007dda"><h3>Adventure Cruises</h3><img class="ci" src="assets/icons/tc-adventure.svg" alt="" style="height:80px"/><img class="go" src="assets/icons/tc-arrow.svg" alt=""/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CRUISER TYPES ===================== -->
+  <section class="section cruisertypes">
+    <div class="container">
+      <div class="sec-head" style="text-align:left"><h2>What Type of Cruiser Are You?</h2><p>Discover Cruise Deals by Traveller Type and Connect with a Specialist Expert</p></div>
+      <div class="cruiser-panel">
+        <button class="cruiser-nav prev" aria-label="Previous cruiser type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <img src="assets/img/cruiser-groups.png" alt="" />
+        <div class="info">
+          <h3>Cruise Groups</h3>
+          <p>The more, the merrier &mdash; whether it&rsquo;s for weddings, reunions, birthday milestones or simply getting together with friends and family, there are many reasons why groups choose to sail with us again and again.</p>
+        </div>
+        <button class="cruiser-nav next" aria-label="Next cruiser type"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MISSION & AWARDS ===================== -->
+  <section class="section mission">
+    <div class="container">
+      <div class="mission__text">
+        <p>We bring our valued clients a fresh look and approach to cruising.</p>
+        <p>From discovering to embarking on your dream cruise our team of cruise specialists will assist you at every step of your journey.</p>
+        <p>Whether you are searching online, chatting online, calling or visiting one of cruise centres, our core purpose is always to attract &amp; delight our valued customers.</p>
+      </div>
+      <div class="mission__awards-h">Our Industry Awards &amp; Recognition</div>
+      <div class="mission__awards">
+        <img src="assets/img/award-1.png" alt=""/><img src="assets/img/award-2.png" alt=""/><img src="assets/img/award-3.png" alt=""/><img src="assets/img/award-4.png" alt=""/><img src="assets/img/award-5.png" alt=""/><img src="assets/img/award-6.png" alt=""/>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CRUISE CLUB ===================== -->
+  <section class="section clubsec">
+    <div class="container">
+      <div class="club-media"><img class="main" src="assets/img/cc-santorini.png" alt=""/><img class="thumb" src="assets/img/cc-italy.png" alt=""/></div>
+      <div class="club-text">
+        <span class="eyebrow" style="color:#fff">BECOME A FRESH MEMBER AND START SAVING</span>
+        <h2 style="color:var(--yellow)">Cruise Club</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A vestibulum in porttitor elit, pharetra, pellentesque. Elit ac nam ornare nec. Nibh ac id mauris dictum pellentesque. Cursus tristique morbi tempor facilisi pulvinar iaculis cras id. Ullamcorper ac senectus et sed augue.</p>
+        <a class="btn btn--yellow" href="#">FIND OUT MORE <img src="assets/icons/arrow-left.svg" class="arrow-r" alt=""/></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CRUISE THE WORLD ===================== -->
+  <section class="section clubsec">
+    <div class="container">
+      <div class="club-text">
+        <span class="eyebrow" style="color:var(--cyan-50)">BUCKET LIST TRAVEL</span>
+        <h2 style="color:#fff">Cruise The World</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A vestibulum in porttitor elit, pharetra, pellentesque. Elit ac nam ornare nec. Nibh ac id mauris dictum pellentesque. Cursus tristique morbi tempor facilisi pulvinar iaculis cras id. Ullamcorper ac senectus et sed augue.</p>
+        <a class="btn btn--cyan50" href="#">FIND OUT MORE <img src="assets/icons/arrow-left.svg" class="arrow-r" alt=""/></a>
+      </div>
+      <div class="world-media"><img class="main" src="assets/img/ctw-scenic.png" alt=""/><img class="thumb" src="assets/img/ctw-thumb.png" alt=""/><a class="more" href="#">More blog articles <img src="assets/icons/arrow-sm.svg" alt=""/></a></div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPETITION ===================== -->
+  <section class="section competition">
+    <div class="container">
+      <span class="eyebrow" style="color:#fff">Enter Our Competition</span>
+      <h2>Win a Free Cruise</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus eget ut lectus odio. In diam cras turpis donec leo felis auctor enim euismod. Aliquam vitae pretium facilisis orci vestibulum scelerisque tristique malesuada. Massa massa euismod urna tincidunt diam est. Integer morbi et mattis id.</p>
+      <form class="comp-form" onsubmit="return false">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="email" placeholder="Email Address" />
+        <button class="enter" type="submit">Enter <img src="assets/icons/arrow-left.svg" alt=""/></button>
+      </form>
+      <div class="comp-consent"><span class="box"></span><span>By entering our competetion you consent to our terms and will be subscribed to our regular newsletter. You can unsubscribe at any time. For more details about how we use your information, view our Privacy Policy.</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== CONNECT WITH US ===================== -->
+  <section class="connect">
+    <div class="container">
+      <span class="connect__title">Connect with us:</span>
+      <div class="connect__icons">
+        <a href="#" aria-label="Facebook"><img src="assets/icons/social-fb.svg" alt="Facebook"/></a>
+        <a href="#" aria-label="YouTube"><img src="assets/icons/social-yt.svg" alt="YouTube"/></a>
+        <a href="#" aria-label="Instagram"><img src="assets/icons/social-ig.svg" alt="Instagram"/></a>
+        <a href="#" aria-label="Pinterest"><img src="assets/icons/social-pin.svg" alt="Pinterest"/></a>
+        <a href="#" aria-label="Twitter"><img src="assets/icons/social-tw.svg" alt="Twitter"/></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <div class="container">
+      <div class="foot__grid">
+        <div class="foot__col brand">
+          <h4><img src="assets/icons/f-freshmark.svg" alt="" style="width:16px"/> Fresh Cruising</h4>
+          <a href="#">Our Story</a><a href="#">Our Awards</a><a href="#">Customer Feedback</a><a href="#">Join Our Team</a><a href="#">Press Office</a><a href="#">Our Opening Times</a>
+        </div>
+        <div class="foot__col">
+          <h4>POPULAR PAGES</h4>
+          <a href="#">Special Offers</a><a href="#">Late Availability</a><a href="#">Cruise Promotions</a><a href="#">No-Fly Cruises</a><a href="#">Cruise &amp; Stay</a><a href="#">River Cruises</a><a href="#">Blog</a>
+        </div>
+        <div class="foot__col">
+          <h4>SUPPORT</h4>
+          <a href="#">Customer Services</a><a href="#">Frequently Asked Questions</a><a href="#">Making Payments</a><a href="#">Advanced Passenger Information</a><a href="#">ATOL Protection Explained</a><a href="#">Cruise Guides</a><a href="#">Fresh Cruise Club</a>
+        </div>
+        <div class="foot__col foot__news">
+          <h4>Receive Our Newsletter</h4>
+          <div class="signup"><span>Enter your email address</span><b>SIGN UP <img src="assets/icons/arrow-left.svg" alt=""/></b></div>
+          <div class="foot__ss">
+            <div class="h">SITE SEARCH</div>
+            <div class="box"><span class="inp">Search Cruise Code/Site</span><span class="btn2">SEARCH <img src="assets/icons/f-search.svg" alt=""/></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="foot__pills" id="footPills">
+        <div class="pill"><button class="pill__head" aria-expanded="false">Cruise Lines <img src="assets/icons/f-plus.svg" alt=""/></button><div class="pill__body"><a href="#">Royal Caribbean</a><a href="#">Celebrity Cruises</a><a href="#">P&amp;O Cruises</a><a href="#">Princess Cruises</a><a href="#">MSC Cruises</a><a href="#">Norwegian Cruise Line</a></div></div>
+        <div class="pill"><button class="pill__head" aria-expanded="false">Cruises From <img src="assets/icons/f-plus.svg" alt=""/></button><div class="pill__body"><a href="#">Southampton</a><a href="#">Dover</a><a href="#">Liverpool</a><a href="#">Newcastle</a><a href="#">Barcelona</a><a href="#">Miami</a></div></div>
+        <div class="pill"><button class="pill__head" aria-expanded="false">Cruise To <img src="assets/icons/f-plus.svg" alt=""/></button><div class="pill__body"><a href="#">Mediterranean</a><a href="#">Caribbean</a><a href="#">Northern Europe</a><a href="#">Alaska</a><a href="#">Dubai &amp; Emirates</a><a href="#">Hawaii</a></div></div>
+        <div class="pill"><button class="pill__head" aria-expanded="false">Cruise Types <img src="assets/icons/f-plus.svg" alt=""/></button><div class="pill__body"><a href="#">No-Fly Cruises</a><a href="#">Cruise &amp; Stay</a><a href="#">River Cruises</a><a href="#">Luxury Cruises</a><a href="#">Foodie Cruises</a><a href="#">Adventure Cruises</a></div></div>
+      </div>
+      <div class="foot__legal">
+        <img class="atol" src="assets/icons/f-atol.svg" alt="ATOL"/>
+        <img class="abta" src="assets/icons/f-abta.svg" alt="ABTA"/>
+        <p>Fresh Crusing is a trading name of Rich Digital Ltd and is registered in England and Wales with registered number 13784794. Package holidays are sold by Fresh Cruising as an agent for Hays Tour Operating Limited ATOL 10531.<br>Rich Digital Ltd t/a Fresh Cruising - 20-22 Wenlock Road, London N1 7GU</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* ============================================================
+   Fresh Cruising — tokens + base (flowing, responsive rebuild)
+   Fonts: Poppins (primary) + Inter (display accents)
+   ============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+
+:root {
+  /* Brand palette */
+  --dark-grey: #595959;
+  --grey-2:    #545454;
+  --mid-grey:  #9d9d9d;
+  --light-grey:#d9d9d9;
+  --cyan:      #45d7f6;
+  --cyan-50:   #82e9ff;
+  --cyan-btn:  #a9e5ff;
+  --yellow:    #ffe400;
+  --yellow-50: #ffe300;
+  --turquoise: #3db6b8;
+  --purple:    #b05bb7;
+  --blue:      #007dda;
+  --blue-2:    #0885e2;
+  --text-grey: #434343;
+  --red:       #ff3d3d;
+  --off-white: #f7f7f7;
+  --border-grey:#9a9a9a;
+
+  --font: "Poppins", system-ui, sans-serif;
+  --font-display: "Inter", "Poppins", sans-serif;
+
+  --maxw: 1440px;
+  --gutter: 80px;
+  --radius: 8px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--dark-grey);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img, svg { display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+button { font: inherit; cursor: pointer; border: 0; background: none; }
+h1, h2, h3, p { margin: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* Layout */
+.container { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: 64px; }
+
+/* Section header (centred by default) */
+.sec-head { margin-bottom: 40px; }
+.sec-head--center { text-align: center; }
+.sec-head h2 { font-family: var(--font); font-weight: 600; font-size: 40px; color: var(--dark-grey); line-height: 1.2; }
+.sec-head p { font-size: 18px; color: var(--dark-grey); margin-top: 8px; }
+.eyebrow { font-size: 16px; font-weight: 700; color: var(--dark-grey); }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 26px; border-radius: 4px; font-weight: 600; font-size: 16px; line-height: 1;
+  transition: filter .15s ease, background .15s ease; }
+.btn:hover { filter: brightness(.95); }
+.btn svg, .btn img { width: 22px; height: 22px; }
+.btn--yellow { background: var(--yellow); color: var(--grey-2); }
+.btn--blue   { background: var(--blue); color: #fff; }
+.btn--cyan   { background: var(--cyan); color: var(--grey-2); }
+.btn--cyan50 { background: var(--cyan-50); color: var(--grey-2); }
+.arrow-r { transform: rotate(180deg); }
+
+/* Responsive gutter */
+@media (max-width: 1024px) { :root { --gutter: 40px; } .sec-head h2 { font-size: 34px; } }
+@media (max-width: 640px)  { :root { --gutter: 20px; } .section { padding-block: 44px; } .sec-head h2 { font-size: 28px; } .sec-head p { font-size: 16px; } }
